@@ -4,22 +4,23 @@ const checkbox = document.getElementById("checkbox");
 const form = document.getElementById("loginForm");
 const existingBtn = document.getElementById("existing");
 
-// check saved credentials
-const savedUsername = localStorage.getItem("username");
+// show button if user already saved
+const savedUser = localStorage.getItem("username");
 
-if (savedUsername) {
+if (savedUser) {
   existingBtn.style.display = "block";
 }
 
-// form submit
-form.addEventListener("submit", function (e) {
+// FORM SUBMIT EVENT
+form.addEventListener("submit", function(e) {
 
   e.preventDefault();
 
   const user = username.value;
   const pass = password.value;
 
-  alert(`Logged in as ${user}`);
+  // Cypress expects this alert
+  alert("Logged in as " + user);
 
   if (checkbox.checked) {
     localStorage.setItem("username", user);
@@ -33,13 +34,13 @@ form.addEventListener("submit", function (e) {
 
 });
 
-// login existing user
-existingBtn.addEventListener("click", function () {
+// existing user login
+existingBtn.addEventListener("click", function() {
 
   const storedUser = localStorage.getItem("username");
 
   if (storedUser) {
-    alert(`Logged in as ${storedUser}`);
+    alert("Logged in as " + storedUser);
   }
 
 });
