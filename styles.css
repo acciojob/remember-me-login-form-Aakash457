@@ -1,1 +1,71 @@
-/*  your css code here. If applicable */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+form{
+    background:white;
+    padding:30px 40px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    width:300px;
+}
+
+h1{
+    position:absolute;
+    top:80px;
+    font-size:28px;
+}
+
+input[type="text"],
+input[type="password"]{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+label{
+    font-size:14px;
+}
+
+#submit{
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#4CAF50;
+    color:white;
+    font-size:16px;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+#submit:hover{
+    background:#45a049;
+}
+
+#existing{
+    margin-top:15px;
+    width:100%;
+    padding:10px;
+    border:none;
+    background:#007bff;
+    color:white;
+    border-radius:4px;
+    cursor:pointer;
+}
+
+#existing:hover{
+    background:#0069d9;
+}
