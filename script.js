@@ -20,7 +20,7 @@ form.addEventListener("submit", function(e) {
   const pass = password.value;
 
   // Cypress expects this alert
-  alert("Logged in as " + user);
+  window.alert("Logged in as " + user);
 
   if (checkbox.checked) {
     localStorage.setItem("username", user);
@@ -40,7 +40,7 @@ existingBtn.addEventListener("click", function() {
   const storedUser = localStorage.getItem("username");
 
   if (storedUser) {
-    alert("Logged in as " + storedUser);
+    window.alert("Logged in as " + storedUser);
   }
 
 });
