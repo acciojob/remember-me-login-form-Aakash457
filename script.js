@@ -1,26 +1,25 @@
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const checkbox = document.getElementById("checkbox");
-const form = document.getElementById("loginForm");
+const submitBtn = document.getElementById("submit");
 const existingBtn = document.getElementById("existing");
 
-// show button if user already saved
+// Show button if saved
 const savedUser = localStorage.getItem("username");
+const savedPass = localStorage.getItem("password");
 
-if (savedUser) {
+if (savedUser && savedPass) {
   existingBtn.style.display = "block";
 }
 
-// FORM SUBMIT EVENT
-form.addEventListener("submit", function(e) {
-
+// ✅ FIX: Use CLICK instead of submit
+submitBtn.addEventListener("click", function(e) {
   e.preventDefault();
 
   const user = username.value;
   const pass = password.value;
 
-  // Cypress expects this alert
-  window.alert("Logged in as " + user);
+  alert("Logged in as " + user);
 
   if (checkbox.checked) {
     localStorage.setItem("username", user);
@@ -31,16 +30,13 @@ form.addEventListener("submit", function(e) {
     localStorage.removeItem("password");
     existingBtn.style.display = "none";
   }
-
 });
 
-// existing user login
+// Existing user
 existingBtn.addEventListener("click", function() {
-
   const storedUser = localStorage.getItem("username");
 
   if (storedUser) {
-    window.alert("Logged in as " + storedUser);
+    alert("Logged in as " + storedUser);
   }
-
 });
