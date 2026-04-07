@@ -1,22 +1,45 @@
-<h1>Login Form</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-<form id="loginForm">
+  <div class="corner-br"></div>
 
-  <label for="username">Username:</label>
-  <input type="text" id="username"><br><br>
+  <div class="wrapper">
+    <h1>Login Form</h1>
+    <p class="stamp">Secure access portal</p>
 
-  <label for="password">Password:</label>
-  <input type="password" id="password"><br><br>
+    <form id="loginForm">
+      <div class="field-group">
+        <label class="field-label" for="username">Username</label>
+        <input type="text" id="username" placeholder="Username" />
+      </div>
 
-  <input type="checkbox" id="checkbox">
-  <label for="checkbox">Remember me:</label><br><br>
+      <div class="field-group">
+        <label class="field-label" for="password">Password</label>
+        <input type="password" id="password" placeholder="Password" />
+      </div>
 
-  <input type="submit" id="submit" value="Submit">
+      <div class="checkbox-row">
+        <input type="checkbox" id="checkbox" />
+        <label for="checkbox">Remember me.</label>
+      </div>
 
-</form>
+      <input type="submit" id="submit" value="Submit" />
+    </form>
 
-<br>
+    <div class="divider" id="divider">
+      <span>or</span>
+    </div>
 
-<button id="existing" style="display:none;">
-  Login as existing user
-</button>
+    <button id="existing">Login as existing user</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
